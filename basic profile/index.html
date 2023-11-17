@@ -9,16 +9,13 @@
     <div class="content">
       <div class="card">
         <img
-          src="https://source.unsplash.com/1600x900?student"
+          src="./img.png"
           alt=""
           class="img"
         />
         <div class="info">
           <h3>dadi sai krishna</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis odit
-            tenetur itaque?
-          </p>
+          <p>Passionate web developer creating innovative and user-friendly solutions for online experiences.</p>
           <div class="links">
             <a
               href="https://www.instagram.com/saikrishna_dev/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
@@ -65,42 +62,48 @@
       }
       .content {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
       }
       .card {
       background-color: rgb(67, 99, 114);
-      color: rgb(14, 13, 13);
         width: 260px;
         height: 280px;
-        border: 1px solid black;
+        border: 1px solid rgb(94, 94, 94);
         margin: 6px;
-        padding: 8px;
-        filter: grayscale(100%);
+        padding: 6px;
+        filter: grayscale(200%);
         overflow: hidden;
         border-radius: 14px;
+        transition: 1.5s;
       }
       .img {
         width: 100%;
         border-radius: 8px 8px 0px 0px;
         margin-bottom: 0px;
       }
+      h3 {
+        padding: 3px;
+        margin: 3px;
+      }
+      p{
+        padding: 5px;
+        margin: 3px;
+      }
       .card:hover {
-        transition: 1.0s;
-        height: 340px;
-        filter: grayscale(0%);
-        color: whitesmoke;
+        transition: 1.8s;
+        height: 360px; 
+        filter: grayscale(-0%);
+        color: rgba(245, 245, 245, 0.611);
+        border: none;
       }
       .links {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 16px;
+        gap: 24px;
+        margin-top: 12px;
         /* filter: grayscale(100%); */
-      }
-      p h1{
-        margin: 0px;
-        padding: 0px;
       }
     </style>
   </body>
