@@ -47,7 +47,7 @@ body {
     border-radius: 8px 8px 0px 0px;
     margin-bottom: 0px;
   }
-  h3 {
+  h4 {
     padding: 3px;
     margin: 3px;
   }
@@ -69,4 +69,5 @@ body {
     gap: 24px;
     margin: 12px;
     margin-top: 12px;
+    color:rgba(245, 245, 245, 0.495) ;
   }
