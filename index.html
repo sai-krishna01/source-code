@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bmi calculator</title>
+</head>
+<body>
+
+    <div class="title">
+        <h1  id="result">🏋️🏋️‍♂️</h1>
+        <div id="category"></div>
+        <input class="input" type="text" placeholder="enter weight" id="weight">
+        <input class="input" type="text" placeholder="enter height" id="height">
+        <button class="btn" onclick="bmi()" id="btn">check bmi</button>
+    </div>
+    <div class="contact">
+        <a href="https://github.com/sai-krishna01/source-code" class="source">source-code</a>
+        <a href="https://www.instagram.com/developer.sai_krishna/?hl=en" class="ig"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        </div>
+    <style>
+        body{
+            padding: 80px;
+            background-image: url(./bg.png);
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+        }
+        .source{
+            color: black;
+            font-size: larger;
+            padding: 8px 12px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 16px;
+        }
+        .ig{
+            color: black;
+            font-size: larger;
+            padding: 8px 12px;
+            position: fixed;
+           top: 0;
+            margin: 16px;
+        }
+       h1{
+            margin: 0px;
+            margin-bottom: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .title{
+            width: 380px;
+            height: 280px;
+            border: 1px solid royalblue;
+            padding: 16px;
+            margin: 50px auto;
+            /* background: transparent; */
+            backdrop-filter: blur(16px);
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+        }
+        .input{
+            border: 2.3px solid transparent;
+            width: 100%;
+            height: 38px;
+            box-sizing: border-box;
+            text-align: center;
+            outline: none;
+            margin-bottom: 6px;
+            border-radius: 8px;
+        }
+
+        .input:focus{
+            /* border:none; */
+            border-color: rgb(8, 8, 8);
+        }
+        .btn{
+            color: whitesmoke;
+            font-size: large;
+            width: 100%;
+             height: 38px;
+            border-radius: 8px;
+            /* background: transparent; */
+            border-color:royalblue ;
+            margin-top: 8px;
+            background-color: black;
+        }
+        .btn:focus{
+            border-color: rgb(235, 235, 238);
+        }
+        
+    </style>
+
+    <script>
+    function bmi() {
+        let weight = document.getElementById("weight");
+        let height = document.getElementById("height");
+        let height2 = height.value / 100;
+        let bmiValue = (weight.value / (height2 * height2)).toFixed(3);
+        let resultElement = document.getElementById("result");
+        resultElement.innerText = 'your bmi value =' + ' ' + bmiValue;
+
+        let categoryElement = document.getElementById("category");
+        if (bmiValue < 18.5) {
+            categoryElement.innerText = "Underweight eat Lassi with Nuts, Ghee, Paneer to gain weight";
+        } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
+            categoryElement.innerText = "Normal weight eat Lassi with Nuts, Ghee and Paneer to gain weight ";
+        } else if (bmiValue >= 25 && bmiValue <= 29.9) {
+            categoryElement.innerText = "Overweight eat Vegetable Salad, Grilled Chicken or Fish, Dal for weight loss";
+        } else if (bmiValue >= 30 && bmiValue <= 34.9) {
+            categoryElement.innerText = "Obesity eat Vegetable Salad, Grilled Chicken or Fish, Dal and also go for walk along with some exercises";
+        } else if (bmiValue = NaN){
+            categoryElement.innerText = "plese enter values"
+        } else {
+            // categoryElement.innerText = "Severe obesity eat Vegetable Salad, Grilled Chicken or Fish, Dal and also go for walk along with some exercises";
+            categoryElement.innerText = "plese enter values";
+        }
+        weight.style.display ='none'
+        height.style.display ='none'
+    }
+</script>
+</body>
+</html>
+
