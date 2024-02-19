@@ -149,7 +149,8 @@
 function calculateBMI() {
         let weight = document.getElementById("weight");
         let height = document.getElementById("height");
-        let height2 = height.value / 100;
+        let height1 = height.value * 30.48;
+        let height2 = height1 / 100
         let bmiValue = (weight.value / (height2 * height2)).toFixed(3);
         let resultElement = document.getElementById("result");
         resultElement.innerText = "Your BMI value: " + bmiValue;
